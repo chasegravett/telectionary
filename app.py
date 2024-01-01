@@ -24,3 +24,15 @@ def after_request(response):
 def index():
     
     return render_template("home.html")
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    
+    session.clear()
+
+    if request.method == "POST":
+        pass
+
+    else:
+        return render_template("login.html")
